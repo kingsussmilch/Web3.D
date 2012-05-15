@@ -34,3 +34,40 @@ This system:
 	- it's even extensible and stylable using such technologies.
 
 And so achieves everything we need it to. 
+
+Design Usage
+------------
+
+Web3.D would include for built in overlays:
+
+- search
+
+  - form (we'll use a field-based search control for greater precision)
+  - list (to enable search mashups)
+  - word globe (for less precise searches, visual improvement of word cloud e.g. quintura.com)
+
+- focus (when a page is focused)
+- views (for new perspectives)
+
+  - sphere
+  - stack
+
+- i18n (slight extension allows this important feature)
+
+Most of these require processing, so include that I the overlay system. 
+
+API
+---
+
+Basic Overlay:
+
+- data-id - either identifies an overlay or element
+- data-unique - attribute that uniquely identifies the element or ? for it's tag name
+
+Processing:
+
+- data-if
+- data-for
+- data-bind
+- data-context
+- data-save
