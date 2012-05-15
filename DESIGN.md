@@ -59,15 +59,58 @@ Most of these require processing, so include that I the overlay system.
 API
 ---
 
+Please note that this is just theory as to where we may head. If a better way appears, we'll take it. 
+
 Basic Overlay:
 
 - data-id - either identifies an overlay or element
 - data-unique - attribute that uniquely identifies the element or ? for it's tag name
 
+RDF loading:
+
+- data-src - where src would cause problems, e.g. SPARQL.
+- data-query - applies a query to (contained) loaded RDF
+- data-pos - 3 CSS positioning measurements defining X, Y, and radius
+
 Processing:
 
-- data-if
-- data-for
-- data-bind
-- data-context
-- data-save
+- data-if - checks an expression for truthiness or '!' means else. In loop, an '!' means if empty.
+- data-for - repeats content for each item in the expression or the keys can be accessed through '*' and values through '-'.
+- data-bind - binds the expression value to the named attributes are element content.
+- data-context - defines variables to be used inside the element.
+- data-save - defines if/whether the context is saved in localStorage or sessionStorage.
+
+Immediate Plans
+---------------
+
+For now, we don't need to implement the overlay system, but a 3D and RDF engine. These can be built ontop of the mentioned
+Three.js and RDFStore JavaScript APIs. Modernizr can also be used to decide which Three.js renderer to use and adapt to 
+touch interfaces (by removing mouse controls and load inertial scrolling code). 
+
+When we need to add search and the alternative views, we can implement the overlay system. 
+
+3D Engine Requirements
+----------------------
+
+In order to render 3D groupings/spheres, the engine will need to over Three.js and RDFStore:
+
+- *Forward touch, mouse, and drag events to 3D objects, and add tooltips.*
+- Inclusion of 2D text (3D would get heavy). 
+- Abstraction upon the Three.js scene with degradation. 
+- Index of objects representing RDF resources. 
+
+- Oh, and including video features would be COOL.
+
+From the underlying engines, we get:
+
+- Three.js (nice demo at: http://mrdoob.github.com/three.js/examples/webgl_sprites.html)
+	- Lines and Sprites
+ 	- Canvas and SVG rendering as well as WebGL
+  	- Vector mathematics
+	- Rotatable groups
+ 	- Ray tracing
+- RDFStore
+	- laoding and querying of RDF data
+	- (Perhaps it supports remote querying, need to check)
+
+A simple wrapper class and utility function should implement all we need to.
