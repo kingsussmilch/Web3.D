@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web3.D.Scene</title>
+	<script src="../src/lib/Three.js"></script>
+	<script src="../src/lib/modernizr.js"></script>
+	<script src="../src/index.js"></script>
+	<script src="../src/scene.js"></script>
+</head>
+<body>
+	<script>
+		var scene = new Web3.D.Scene(400, 300)
+		document.body.appendChild(scene.domElement)
+
+		// create a sphere to actually see something
+		var radius = 50,
+			segments = 15,
+			rings = 16
+
+		var sphereMaterial = new THREE.MeshLambertMaterial({
+			color: 0xCC0000
+		})
+
+		var sphere = new THREE.Mesh(
+			new THREE.SphereGeometry(
+				radius,
+				segments,
+				rings
+			),
+			sphereMaterial
+		)
+
+		scene.scene.add(sphere)
+	</script>
+</body>
