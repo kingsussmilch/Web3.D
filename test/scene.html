@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web3.D.Scene</title>
+	<script src="../src/lib/Three.js"></script>
+	<script src="../src/lib/modernizr.js"></script>
+	<script src="../src/index.js"></script>
+	<script src="../src/scene.js"></script>
+</head>
+<body>
+	<script>
+		var scene = new Web3.D.Scene(400, 300)
+		document.body.appendChild(scene.domElement)
+
+		// create a sprite to actually see something
+		var sprite = new THREE.Sprite({
+			map : new THREE.ImageUtils.loadTexture('sprite.png'),
+			color : 0x00ff00,
+			useScreenCoordinates : false
+		})
+		sprite.uvScale.set( 2, 2 );
+		sprite.uvOffset.set( -0.5, -0.5 );
+
+		sprite.position.set(100, 100, 0)
+		scene.scene.add(sprite)
+
+		// test ontick
+		var rmTick = scene.ontick(function() {
+			sprite.position.y -= 1
+			if (sprite.position.y > 150) rmTick()
+		})
+
+		// test register
+		scene.register(sprite, {
+			click : function() {sprite.color.set(0xff0000)}
+		})
+	</script>
+</body>
