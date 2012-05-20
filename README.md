@@ -6,9 +6,6 @@ Alternative navigation mechanism for "the long tail" built on WebGL/Three.js and
 RDF/Semantic Web Architecture
 =============================
 
-URI - Universally unique identifiers, mainly with DNS help
-CURIE - URI/shortcut by namespacingbase URIs
-XML - common syntax, plan text base
 
 Web3.D uses the idea of bringing 3 dimensions into the web to expand the capacity of a simple search enjine in order
 find a wider selection of search results. It uses RDF(Resource Description Framework)/XML(Xtensible
