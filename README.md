@@ -14,3 +14,7 @@ Markup Language), Turtle and N3. It also uses RDFa embeddded in the (X)HTML.
 RDF is loaded using GRDDL(Glenaning Resource Descriptions from Dialects of Languages)which defines XSL importers for 
 antoligy, doctype or file. OWL(Web Ontology Language) implemented in RIF(Rule Interchange Format) finds the
 "rules" for descovering triplets. 
+
+Change Log
+==========
+
