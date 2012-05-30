@@ -1,20 +1,22 @@
 Web3.D
 ======
 
-Alternative navigation mechanism for "the long tail" built on WebGL/Three.js and Web3.0
+Currently sites rely on search engines to provide access to their hard to reach pages. This searches are prone to 
+misunderstanding and relies on an index which can get out of date. We provide an innovative alternative. WebGL meets RDF!
+It renders your pages and their relationships on a gorgeously 3D sphere (for maximum visibility of content) and links 
+them. 
 
-RDF/Semantic Web Architecture
-=============================
-
-
-Web3.D uses the idea of bringing 3 dimensions into the web to expand the capacity of a simple search enjine in order
-find a wider selection of search results. It uses RDF(Resource Description Framework)/XML(Xtensible
-Markup Language), Turtle and N3. It also uses RDFa embeddded in the (X)HTML. 
-
-RDF is loaded using GRDDL(Glenaning Resource Descriptions from Dialects of Languages)which defines XSL importers for 
-antoligy, doctype or file. OWL(Web Ontology Language) implemented in RIF(Rule Interchange Format) finds the
-"rules" for descovering triplets. 
+And yes, for these times you can't see what you want immediately, we provide search. But we'll innovate! For those times
+you want something exact, we'll give you a special gridded precise search control. If you don't know what you want, 
+searching for keywords brings up a "word globe". 
 
 Change Log
 ==========
 
+- Scene prepared with attempted code to forward events. 
+
+Please Note
+===========
+
+Web3.D may get a slow start as @kingsussmilch, it's manager, is learning the necessary technologies under the mentorship 
+of @alcinnz. 
