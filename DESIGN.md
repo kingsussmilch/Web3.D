@@ -59,26 +59,7 @@ Most of these require processing, so include that I the overlay system.
 API
 ---
 
-Please note that this is just theory as to where we may head. If a better way appears, we'll take it. 
-
-Basic Overlay:
-
-- data-id - either identifies an overlay or element
-- data-unique - attribute that uniquely identifies the element or ? for it's tag name
-
-RDF loading:
-
-- data-src - where src would cause problems, e.g. SPARQL.
-- data-query - applies a query to (contained) loaded RDF
-- data-pos - 3 CSS positioning measurements defining X, Y, and radius
-
-Processing:
-
-- data-if - checks an expression for truthiness or '!' means else. In loop, an '!' means if empty.
-- data-for - repeats content for each item in the expression or the keys can be accessed through '*' and values through '-'.
-- data-bind - binds the expression value to the named attributes are element content.
-- data-context - defines variables to be used inside the element.
-- data-save - defines if/whether the context is saved in localStorage or sessionStorage.
+Such a system can be built by combining http://disruptive-innovations.com/zoo/20040830/HTMLoverlays.html and http://ejohn.org/blog/javascript-micro-templating/.
 
 Immediate Plans
 ---------------
